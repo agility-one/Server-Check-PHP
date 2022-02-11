@@ -1,5 +1,17 @@
 <?php
 
+//******************************************************
+// 						/?infox=1					   *
+//******************************************************
+if(!empty($_REQUEST['infox'])) {
+	echo "<pre>";
+	print_r($_SERVER);
+	echo "</pre>";
+	exit;
+}
+
+//******************************************************
+
 	$server_check_version = '1.0.4';
 	$start_time = microtime(TRUE);
 
@@ -48,8 +60,6 @@
 
 	$memusage = round(($memavailable/$memtotal)*100);
 
-
-
 	$phpload = round(memory_get_usage() / 1000000,2);
 
 	$diskfree = round(disk_free_space(".") / 1000000000);
@@ -70,18 +80,19 @@
 	$time_taken = $end_time - $start_time;
 	$total_time = round($time_taken,4);
 
-	// use servercheck.php?json=1
+	// use index.php?json=1
 	if (isset($_GET['json'])) {
 		echo '{"ram":'.$memusage.',"cpu":'.$cpuload.',"disk":'.$diskusage.',"connections":'.$totalconnections.'}';
 		exit;
 	}
 
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>ServerCheck</title>
+	<title>.:|Srv Infos|:.</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<style>
 	html {
@@ -166,8 +177,10 @@
 		<p><span class="description">💽 Hard Disk Total:</span> <span class="result"><?php echo $disktotal; ?> GB</span></p>
 		<hr>
 		<div id="details">
+			<p><span class="description">📟 Server Software: </span> <span class="result"><?php echo $_SERVER['SERVER_SOFTWARE']; ?></span></p>
 			<p><span class="description">📟 Server Name: </span> <span class="result"><?php echo $_SERVER['SERVER_NAME']; ?></span></p>
 			<p><span class="description">💻 Server Addr: </span> <span class="result"><?php echo $_SERVER['SERVER_ADDR']; ?></span></p>
+			<p><span class="description">💻 Server Port: </span> <span class="result"><?php echo $_SERVER['SERVER_PORT']; ?></span></p>
 			<p><span class="description">🌀 PHP Version: </span> <span class="result"><?php echo phpversion(); ?></span></p>
 			<p><span class="description">🏋️ PHP Load: </span> <span class="result"><?php echo $phpload; ?> GB</span></p>
 			
@@ -176,8 +189,7 @@
 	</div>
 	<footer>
 		<div class="footer">
-			<a href="https://github.com/jamesbachini/Server-Check-PHP">Server Check PHP</a> v <?php echo $server_check_version; ?> | 
-			Built by <a href="https://jamesbachini.com">James Bachini</a> | <a href="?json=1">JSON</a> | 🌙 <a href="javascript:void(0)" onclick="toggleDarkMode();">Dark Mode</a>
+			<a href="?infox=1">Infox</a> | <a href="?json=1">JSON</a> | 🌙 <a href="javascript:void(0)" onclick="toggleDarkMode();">Dark Mode</a>
 		</div>
 	</footer>
 <script>
