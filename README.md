@@ -14,7 +14,7 @@ PHP script for Ram and CPU usage stats for server health check
 
 For original blog post and more information visit: https://jamesbachini.com/ram-cpu-usage-php-script/
 
-![Server Check PHP](https://jamesbachini.com/wp-content/uploads/2020/09/screenshot.png)
+![Server Check PHP](https://github.com/agility-one/Server-Check-PHP/blob/master/vumetre.png)
 
 ## Updates
 
