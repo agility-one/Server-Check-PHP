@@ -3,8 +3,8 @@ rajouter ces lignes dans php.ini sur les systemes win32
 si au lancement du script vous avez : "Uncaught error Class COM Not Found ..."
 Se trouve dans php/ext de base
 
- [COM_DOT_NET]
- extension=php_com_dotnet.dll
+- [COM_DOT_NET]
+- extension=php_com_dotnet.dll
 
 # Projet parfait en vumetre ressources
 ----------------------------------------------------------------------------------------------------------------
