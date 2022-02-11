@@ -7,6 +7,8 @@
 - [COM_DOT_NET]
 - extension=php_com_dotnet.dll
 
+- test on Xamp win x64 et SRV built in PHP -S on Win x64 et Ubuntu Gorillaz krnl 5.9x 
+
 ----------------------------------------------------------------------------------------------------------------
 
 # Server Check PHP
