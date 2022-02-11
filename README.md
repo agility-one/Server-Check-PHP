@@ -1,3 +1,13 @@
+----------------------------------------------------------------------------------------------------------------
+rajouter ces lignes dans php.ini sur les systemes win32 
+si au lancement du script vous avez : "Uncaught error Class COM Not Found ..."
+
+[COM_DOT_NET]
+extension=php_com_dotnet.dll
+
+# Projet parfait en vumetre ressources
+----------------------------------------------------------------------------------------------------------------
+
 # Server Check PHP
 PHP script for Ram and CPU usage stats for server health check
 
