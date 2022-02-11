@@ -1,7 +1,7 @@
 <?php
 
 //******************************************************
-// 						/?infox=1					   *
+// 			/?infox=1		       *
 //******************************************************
 if(!empty($_REQUEST['infox'])) {
 	echo "<pre>";
@@ -189,7 +189,8 @@ if(!empty($_REQUEST['infox'])) {
 	</div>
 	<footer>
 		<div class="footer">
-			<a href="?infox=1">Infox</a> | <a href="?json=1">JSON</a> | 🌙 <a href="javascript:void(0)" onclick="toggleDarkMode();">Dark Mode</a>
+			<a href="https://github.com/jamesbachini/Server-Check-PHP">Server Check PHP</a> v <?php echo $server_check_version; ?> | 
+			Built by <a href="https://jamesbachini.com">James Bachini</a> | <a href="?infox=1">Infox</a> | <a href="?json=1">JSON</a> | 🌙 <a href="javascript:void(0)" onclick="toggleDarkMode();">Dark Mode</a>
 		</div>
 	</footer>
 <script>
